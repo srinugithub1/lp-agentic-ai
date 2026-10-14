@@ -775,6 +775,11 @@ h1 .hl2{background:linear-gradient(90deg,#ff6a00,var(--claude));-webkit-backgrou
 .earn-line{text-align:center;font-family:var(--fh);font-weight:700;font-size:1.1rem;color:var(--ink);margin-top:32px}
 #earn .disclaimer{margin-top:12px}
 #reviews .rating-bar{margin-top:32px}
+.track .rate{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.rt{font-size:1rem;letter-spacing:2px;background:linear-gradient(90deg,#f5a623 calc(var(--r)/5*100%),#d6dde6 0);-webkit-background-clip:text;background-clip:text;color:transparent}
+.track .rate b{font-family:var(--fh);font-size:.85rem;color:var(--ink)}
+.track .rate .sample{margin-left:auto;font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:var(--bg);border:1px dashed #cbd5e1;padding:2px 7px;border-radius:5px}
+.track .card p{color:var(--text);line-height:1.7;flex:1;font-size:.95rem}
 @media(max-width:1100px){#projects .ind-grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:960px){#projects .ind-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:640px){#projects .ind-grid{grid-template-columns:1fr}.hero-lead{font-size:1.08rem}}
@@ -1166,13 +1171,11 @@ h1 .hl2{background:linear-gradient(90deg,#ff6a00,var(--claude));-webkit-backgrou
       <div><b><span data-count="5">0</span></b><span>Live projects</span></div>
       <div><b><span data-count="3">0</span></b><span>Free live sessions</span></div>
     </div>
-    <!--
-      Verified testimonials go here. Only add genuine, permission-based reviews
-      (learner name + batch). Card markup:
-      <div class="testi">
-        <div class="card"><div class="stars">★★★★★</div><p>"…"</p><div class="by"><div class="av" style="background:#0176d3">AB</div><div><b>Name</b><span>Batch</span></div></div></div>
-      </div>
-    -->
+    <!-- SAMPLE reviews for layout testing only. Replace with genuine, permission-based reviews and remove the "Sample" tags and note. -->
+    <div class="carousel">
+      <div class="track" id="reviewTrack"><div class="card"><div class="rate"><span class="rt" style="--r:5" aria-label="5 out of 5 stars">★★★★★</span><b>5</b><span class="sample">Sample</span></div><p>"I used ChatGPT daily but only for answers. After the context engineering module I built a workflow that turns my meeting notes into a task list and a client summary every evening."</p><div class="by"><div class="av" style="background:#0176d3">ST</div><div><b>Sai Teja R.</b><span>Hyderabad, Telangana</span></div><span class="role">Working Professional</span></div></div><div class="card"><div class="rate"><span class="rt" style="--r:4.5" aria-label="4.5 out of 5 stars">★★★★★</span><b>4.5</b><span class="sample">Sample</span></div><p>"Codex helped me build a small enquiry tracker for my father's shop. The trainer made us test every step and review the output before trusting it, which I really appreciated."</p><div class="by"><div class="av" style="background:#0e8f6e">LP</div><div><b>Lakshmi P.</b><span>Vijayawada, Andhra Pradesh</span></div><span class="role">B.Tech Student</span></div></div><div class="card"><div class="rate"><span class="rt" style="--r:4" aria-label="4 out of 5 stars">★★★★★</span><b>4</b><span class="sample">Sample</span></div><p>"Good practical sessions. The orchestration module was a bit fast for me as a non-coder, but the recordings and WhatsApp support helped me catch up and finish the project."</p><div class="by"><div class="av" style="background:#d97757">KS</div><div><b>Karthik S.</b><span>Coimbatore, Tamil Nadu</span></div><span class="role">Career Switcher</span></div></div><div class="card"><div class="rate"><span class="rt" style="--r:5" aria-label="5 out of 5 stars">★★★★★</span><b>5</b><span class="sample">Sample</span></div><p>"The Research and Content project changed how I work. Grok for research, Claude for the draft, then my own review. I now deliver client blogs in half the time."</p><div class="by"><div class="av" style="background:#5b3df5">DM</div><div><b>Divya M.</b><span>Bengaluru, Karnataka</span></div><span class="role">Freelance Writer</span></div></div><div class="card"><div class="rate"><span class="rt" style="--r:4.5" aria-label="4.5 out of 5 stars">★★★★★</span><b>4.5</b><span class="sample">Sample</span></div><p>"Prompt engineering finally made sense when we wrote instructions with goals, constraints and examples. My reports at work need far fewer corrections now."</p><div class="by"><div class="av" style="background:#d98b00">RK</div><div><b>Ravi Kiran N.</b><span>Warangal, Telangana</span></div><span class="role">Operations Executive</span></div></div><div class="card"><div class="rate"><span class="rt" style="--r:4" aria-label="4 out of 5 stars">★★★★★</span><b>4</b><span class="sample">Sample</span></div><p>"Very useful content. I would have liked one more session on API costs, but the team explained the tool requirements clearly before I enrolled."</p><div class="by"><div class="av" style="background:#102a4c">AK</div><div><b>Anil Kumar B.</b><span>Guntur, Andhra Pradesh</span></div><span class="role">Small Business Owner</span></div></div><div class="card"><div class="rate"><span class="rt" style="--r:5" aria-label="5 out of 5 stars">★★★★★</span><b>5</b><span class="sample">Sample</span></div><p>"AI Mission Control was my favourite build. Seeing tasks, agent outputs and approvals in one place is exactly what I now show clients when I pitch automation work."</p><div class="by"><div class="av" style="background:#0e8f6e">MN</div><div><b>Meera Nair</b><span>Kochi, Kerala</span></div><span class="role">Automation Freelancer</span></div></div><div class="card"><div class="rate"><span class="rt" style="--r:4.5" aria-label="4.5 out of 5 stars">★★★★★</span><b>4.5</b><span class="sample">Sample</span></div><p>"I joined the free sessions just to understand agents. The live demo of an AI finishing a real task convinced me to join the full programme."</p><div class="by"><div class="av" style="background:#0176d3">PP</div><div><b>Prakash Patil</b><span>Pune, Maharashtra</span></div><span class="role">IT Support Engineer</span></div></div><div class="card"><div class="rate"><span class="rt" style="--r:5" aria-label="5 out of 5 stars">★★★★★</span><b>5</b><span class="sample">Sample</span></div><p>"As a fresher I had no portfolio. Now I have five working demos with documentation, and interviewers ask more about them than about my degree."</p><div class="by"><div class="av" style="background:#5b3df5">SR</div><div><b>Sneha Reddy</b><span>Tirupati, Andhra Pradesh</span></div><span class="role">Fresher · 2025</span></div></div><div class="card"><div class="rate"><span class="rt" style="--r:4" aria-label="4 out of 5 stars">★★★★★</span><b>4</b><span class="sample">Sample</span></div><p>"Solid structure from foundations to orchestration. Some exercises need paid subscriptions, so plan for that, but the projects are worth it."</p><div class="by"><div class="av" style="background:#d97757">AM</div><div><b>Arjun Mehta</b><span>Ahmedabad, Gujarat</span></div><span class="role">Product Analyst</span></div></div></div>
+    </div>
+    <p class="carousel-note">Sample reviews shown for layout. Verified learner reviews coming soon. Hover to pause.</p>
   </div>
 </section>
 
@@ -1237,6 +1240,7 @@ const hb=document.getElementById('hamburger'),mm=document.getElementById('mobile
 hb.addEventListener('click',()=>mm.classList.toggle('open'));
 mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mm.classList.remove('open')));
 const mq=document.getElementById('marquee');mq.innerHTML+=mq.innerHTML;
+const rt=document.getElementById('reviewTrack');if(rt)rt.innerHTML+=rt.innerHTML;
 document.querySelectorAll('.acc').forEach(acc=>{
   acc.querySelectorAll('.acc-btn').forEach(btn=>btn.addEventListener('click',()=>{
     const item=btn.parentElement,open=item.classList.contains('open');
@@ -1256,7 +1260,7 @@ document.getElementById('year').textContent=new Date().getFullYear();
   function countUp(el){const end=+el.dataset.count;if(reduce){el.textContent=fmt(end);return}const dur=1400,t0=performance.now();(function step(t){const p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,3);el.textContent=fmt(Math.round(end*e));if(p<1)requestAnimationFrame(step)})(t0)}
   const seen=new WeakSet();
   const io2=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target;if(seen.has(el))return;seen.add(el);el.classList.add('in');el.querySelectorAll('[data-count]').forEach(countUp);if(el.matches('[data-count]'))countUp(el);io2.unobserve(el)}),{threshold:.2});
-  document.querySelectorAll('.anim').forEach(el=>io2.observe(el));
+  document.querySelectorAll('.anim,.carousel').forEach(el=>io2.observe(el));
   document.querySelectorAll('[data-count]').forEach(el=>{if(!el.closest('.anim'))io2.observe(el)});
 })();
 </script>
